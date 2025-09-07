@@ -2,12 +2,12 @@ const loginLink = document.querySelector("#log-btn");
 const registerLink = document.querySelector("#reg-btn");  
 const loginBox = document.querySelector(".login");
 const registerBox = document.querySelector(".register");
-const otpBox = document.querySelector(".otp-box");       // new OTP box
+const otpBox = document.querySelector(".otp-box");       
 const logOpenBtn = document.querySelector("#Log-reg-btn"); 
 const popup = document.querySelector(".popup");
 const closeBtn = document.querySelector("#close");
 
-// Open popup
+
 logOpenBtn.addEventListener("click", () => {
   popup.classList.add("active");
   loginBox.classList.add("active");
@@ -15,7 +15,7 @@ logOpenBtn.addEventListener("click", () => {
   otpBox.classList.remove("active");
 });
 
-// Close popup
+
 closeBtn.addEventListener("click", () => {
   popup.classList.remove("active");
   loginBox.classList.remove("active");
@@ -23,7 +23,7 @@ closeBtn.addEventListener("click", () => {
   otpBox.classList.remove("active");
 });
 
-// Switch forms
+
 loginLink.addEventListener("click", () => {
   loginBox.classList.add("active");
   registerBox.classList.remove("active");
@@ -35,7 +35,7 @@ registerLink.addEventListener("click", () => {
   otpBox.classList.remove("active");
 });
 
-// REGISTER
+
 const registerBtn = registerBox.querySelector("button");
 registerBtn.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -60,7 +60,7 @@ registerBtn.addEventListener("click", async (e) => {
     alert(data.msg);
 
     if (res.ok) {
-      // Show OTP box
+      
       otpBox.classList.add("active");
       registerBox.classList.remove("active");
     }
@@ -71,7 +71,7 @@ registerBtn.addEventListener("click", async (e) => {
   }
 });
 
-// OTP Verification
+
 const otpInput = document.querySelector("#otp-input");
 const otpSubmit = document.querySelector("#otp-submit");
 
@@ -107,7 +107,7 @@ otpSubmit.addEventListener("click", async () => {
   }
 });
 
-// LOGIN
+
 const loginBtn = loginBox.querySelector("button");
 loginBtn.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -140,3 +140,4 @@ loginBtn.addEventListener("click", async (e) => {
     alert("Error connecting to server");
   }
 });
+
