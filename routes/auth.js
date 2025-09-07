@@ -6,12 +6,12 @@ const transporter = require("../mailer");
 
 const router = express.Router();
 
-// Helper to generate 6-digit OTP
+
 function generateOTP() {
   return Math.floor(100000 + Math.random() * 900000).toString();
 }
 
-// ===== REGISTER + SEND OTP =====
+
 router.post("/register", (req, res) => {
   const { username, email, password } = req.body;
 
@@ -32,7 +32,7 @@ router.post("/register", (req, res) => {
       (err) => {
         if (err) return res.status(500).send(err);
 
-        // Send OTP email
+        
         const mailOptions = {
           from: '"Auth App" <avikedare27@gmail.com>',
           to: email,
@@ -52,7 +52,7 @@ router.post("/register", (req, res) => {
   });
 });
 
-// ===== VERIFY OTP =====
+
 router.post("/verify-otp", (req, res) => {
   const { email, otp } = req.body;
 
@@ -69,7 +69,7 @@ router.post("/verify-otp", (req, res) => {
   });
 });
 
-// ===== LOGIN (ONLY VERIFIED USERS) =====
+
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
 
@@ -91,3 +91,4 @@ router.post("/login", (req, res) => {
 });
 
 module.exports = router;
+
