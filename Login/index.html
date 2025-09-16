@@ -5,85 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crop Recommendation</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="main">
+<div class="main">
 
-        <button id="Log-reg-btn">Login/Register</button>
-        <div class="popup">
-            <button id="close"><i class="fa-solid fa-circle-xmark"></i></button>    
-            <div class="login">
-                <h1 id="heading">Login</h1>
-                
-                <div id="input">
-                    <div id="icons">
-                     <label for="" placeholder=" " required>Email</label>
-                     <i class="fa-solid fa-user"></i>
-                    </div>
-                    <input type="text"></div>
-                
-                
-                <div id="input">
-                    <div id="icons"><label for="" placeholder=" " required>Password </label>
-                    <i class="fa-solid fa-lock"></i></div>
-                    
-                    
-                    <input type="password">
+    <button id="Log-reg-btn">Login/Register</button>
+
+    <div class="popup">
+        <button id="close"><i class="fa-solid fa-circle-xmark"></i></button>    
+
+        <!-- LOGIN FORM -->
+        <div class="login">
+            <h1 id="heading">Login</h1>
+
+            <div id="input">
+                <div id="icons">
+                    <label>Email</label>
+                    <i class="fa-solid fa-user"></i>
                 </div>
-                
-                <button type="submit" id="login-btn">Login</button>
-                <div id="register-box">
-                    <p>New user <a href="#" id="reg-btn">Register</a></p>
-                </div>
+                <input type="text" >
             </div>
 
-
-            <div class="register">
-                <h1 id="heading">Register</h1>
-                
-                <div id="input">
-                    <div id="icons">
-                     <label for="" placeholder=" " required>Username</label>
-                     <i class="fa-solid fa-user"></i>
-                    </div>
-                    <input type="text"></div>
-                
-                    <div id="input">
-                    <div id="icons">
-                     <label for="" placeholder=" " required>Email</label>
-                     <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <input type="text"></div>
-
-                <div id="input">
-                    <div id="icons"><label for="" placeholder=" " required>Password </label>
-                    <i class="fa-solid fa-lock"></i></div>
-                    
-                    
-                    <input type="password">
+            <div id="input">
+                <div id="icons">
+                    <label>Password</label>
+                    <i class="fa-solid fa-lock"></i>
                 </div>
-                
-                <button type="submit" id="login-btn">Register</button>
-                <div id="register-box">
-                    <p>Already have account ,<a href="#" id="log-btn">Login</a> </p>
-                </div>
+                <input type="password" >
             </div>
 
-            
-<div class="otp-box">
-    <h2>Verify Your Email</h2>
-    <input type="text" id="otp-input" placeholder="Enter OTP" maxlength="6">
-    <button id="otp-submit">Verify</button>
-</div>
-
-
-            
+            <button type="submit" id="login-btn">Login</button>
+            <div id="register-box">
+                <p>New user <a href="#" id="reg-btn">Register</a></p>
+            </div>
         </div>
 
-        
+        <!-- REGISTER FORM -->
+        <div class="register">
+            <h1 id="heading">Register</h1>
+
+            <div id="input">
+                <div id="icons">
+                    <label>Username</label>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <input type="text" >
+            </div>
+
+            <div id="input">
+                <div id="icons">
+                    <label>Email</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <input type="text" >
+            </div>
+
+            <div id="input">
+                <div id="icons">
+                    <label>Mobile Number</label>
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <input type="tel" >
+            </div>
+
+            <div id="input">
+                <div id="icons">
+                    <label>Password</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <input type="password" >
+            </div>
+
+            <button type="submit" id="login-btn">Register</button>
+            <div id="register-box">
+                <p>Already have account ,<a href="#" id="log-btn">Login</a></p>
+            </div>
+        </div>
+
+        <!-- OTP BOX -->
+        <div class="otp-box">
+            <h1 id="heading">Verification</h1>
+            <div id="input">
+                <div id="icons">
+                    <label>Enter OTP sent to email</label>
+                </div>
+                <input type="otp" id="email-otp-input">
+            </div>
+            <div id="input">
+                <div id="icons">
+                    <label>Enter OTP sent to Mobile</label>
+                    
+                </div>
+                <input type="otp" id="mobile-otp-input">
+            </div>
+            <button id="otp-submit">Verify</button>
+        </div>
+
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
