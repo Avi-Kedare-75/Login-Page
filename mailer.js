@@ -5,9 +5,10 @@ const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: "avikedare27@gmail.com",       
-    pass: "iiufleonnkxisfed"           
+    pass: ""           
   }
 });
 
 module.exports = transporter;
+
 
